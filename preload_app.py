@@ -1,6 +1,5 @@
 import streamlit as st
 import pandas as pd
-import openpyxl
 
 st.header("Preload JSON")
 st.write("Converts preload excel file to preload json file.")
