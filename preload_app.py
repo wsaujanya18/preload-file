@@ -9,7 +9,7 @@ def main():
   st.title("CSV and Excel file Uploader")
 
   # File uploader
-  uploaded_file = st.file_uploader("Uplaod a CSV or Excel file", type=["Csv", "xlsx"])
+  uploaded_file = st.file_uploader("Uplaod a CSV or Excel file", type=["csv", "xlsx"])
 
   if uploaded_file is not None:
     file_extension = uploaded_file.name.split(".")[-1]
@@ -28,7 +28,7 @@ def main():
       st.text_area("JSON Data", json_data, height=500)
 
       # Download button for JSON data
-      st.download_button("Download JSON File", data=json_data, file_name=uploaded_file.name)
+      st.download_button("Download JSON File", data=json_data, file_name=uploaded_file.name, mime="text/json")
 
 
 if __name__ == "__main__":
