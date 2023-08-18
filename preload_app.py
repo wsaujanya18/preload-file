@@ -29,7 +29,7 @@ def main():
       st.text_area("JSON Data", json_data, height=500)
 
       # Download button for JSON data
-      st.download_button("Download JSON File", data=json_data, file_name=file_name.name + ".json", mime="text/json")
+      st.download_button("Download JSON File", data=json_data, file_name=file_name, mime="text/json")
 
 
 if __name__ == "__main__":
