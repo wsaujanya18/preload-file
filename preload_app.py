@@ -13,6 +13,7 @@ def main():
 
   if uploaded_file is not None:
     file_extension = uploaded_file.name.split(".")[-1]
+    file_name = uploaded_file.name.split(".")[0]
 
     if file_extension == "csv":
       df = pd.read_csv(uploaded_file)
@@ -28,7 +29,7 @@ def main():
       st.text_area("JSON Data", json_data, height=500)
 
       # Download button for JSON data
-      st.download_button("Download JSON File", data=json_data, file_name=uploaded_file.name + ".json", mime="text/json")
+      st.download_button("Download JSON File", data=json_data, file_name=file_name.name + ".json", mime="text/json")
 
 
 if __name__ == "__main__":
