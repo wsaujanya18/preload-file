@@ -18,7 +18,7 @@ def main():
     if file_extension == "csv":
       df = pd.read_csv(uploaded_file)
     elif file_extension == "xlsx":
-      df = pd.read_excel(uploaded_file, engine="openpyxl")
+      df = pd.read_excel(uploaded_file)
 
     # Show Dataframe
     st.dataframe(df)
