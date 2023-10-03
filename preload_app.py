@@ -16,7 +16,7 @@ def main():
     file_name = uploaded_file.name.split(".")[0]
 
     if file_extension == "csv":
-      df = pd.read_csv(uploaded_file)
+      df = pd.read_csv(uploaded_file, dtype="str")
     elif file_extension == "xlsx":
       df = pd.read_excel(uploaded_file, dtype="str")
 
