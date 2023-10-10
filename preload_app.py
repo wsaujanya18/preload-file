@@ -28,8 +28,13 @@ def main():
       json_data = df.to_json(orient='records', force_ascii=False)
       st.text_area("JSON Data", json_data, height=500)
 
-      # Download button for JSON data
-      st.download_button("Download JSON File", data=json_data, file_name=file_name + ".json", mime="text/json")
+      # Save DataFrame to JSON file
+      with open(file_name + ".json", 'w', encoding='utf-8') as file:
+        df.to_json(file, force_ascii=False, orient='records')
+        st.success(f"JSON file '{file_name}.json' saved successfully!")
+
+        # Download button for JSON data
+        st.download_button("Download JSON File", data=json_data, file_name=file_name + ".json", mime="text/json")
 
 
 if __name__ == "__main__":
