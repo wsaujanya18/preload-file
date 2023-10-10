@@ -17,7 +17,7 @@ This Python script provides a user-friendly interface using Streamlit, allowing 
 ### Requirements
 
 - Python 3.x
-- Required Python libraries are mentioned in the code (Streamlit and Pandas). You can install them using `pip install streamlit pandas`.
+- Required Python libraries are mentioned in the code (Streamlit, Pandas and Openpyxl). You can install them using `pip install streamlit pandas openpyxl`.
 
 ### How to Run
 
